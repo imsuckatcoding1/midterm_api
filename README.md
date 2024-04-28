@@ -24,7 +24,7 @@ fastAPI를 이용한 todolist 만들기, 2024 1학기 캡스톤프로젝트
 
 ## ToDo리스트 만들기
 
-
+```python
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import List
@@ -67,3 +67,4 @@ async def delete_todo_item(item_id: int):
             del todo_db[index]
             return {"message": "Item deleted successfully"}
     raise HTTPException(status_code=404, detail="Item not found")
+```
